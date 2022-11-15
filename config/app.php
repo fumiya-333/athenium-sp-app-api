@@ -211,7 +211,6 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         'AppConstants' =>  App\Libs\AppConstants::class,
-        'MemberUtil' =>  App\Libs\MemberUtil::class,
     ])->toArray(),
 
 ];
