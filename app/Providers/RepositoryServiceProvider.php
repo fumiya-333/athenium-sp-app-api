@@ -6,9 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
-    private $models = [
-        'MMember',
-    ];
+    private $models = ['MMember'];
 
     public function register()
     {

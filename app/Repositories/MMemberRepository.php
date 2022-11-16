@@ -22,7 +22,7 @@ class MMemberRepository extends BaseRepository implements MMemberRepositoryInter
     {
         return MMember::updateOrCreate(
             [
-                MMember::COL_M_MEMBER_ID => $params[MMember::COL_M_MEMBER_ID]
+                MMember::COL_M_MEMBER_ID => $params[MMember::COL_M_MEMBER_ID],
             ],
             $params
         );
