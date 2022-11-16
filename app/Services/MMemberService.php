@@ -93,17 +93,9 @@ class MMemberService extends BaseService implements MMemberServiceInterface
 
     private function getUpdateParams(UpdateRequest $request)
     {
-        $m_member = $this->m_member_repository->first(
-            [MMember::COL_M_MEMBER_ID],
-            [
-                $this->m_member_repository::KEY => MMember::COL_EMAIL,
-                $this->m_member_repository::JUDGE => '=',
-                $this->m_member_repository::VALUE => $request->email,
-            ]
-        );
         $params = [
             MMember::TABLE_NAME_SINGULAR => [
-                MMember::COL_M_MEMBER_ID => $m_member->m_member_id,
+                MMember::COL_M_MEMBER_ID => $request->m_member_id,
                 MMember::COL_FIRST_NAME => $request->first_name,
                 MMember::COL_LAST_NAME => $request->last_name,
                 MMember::COL_FIRST_NAME_KANA => $request->first_name_kana,
