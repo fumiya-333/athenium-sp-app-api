@@ -96,9 +96,9 @@ class MMemberService extends BaseService implements MMemberServiceInterface
         $m_member = $this->m_member_repository->first(
             [MMember::COL_M_MEMBER_ID],
             [
-                $this->m_student_repository::KEY => MStudent::COL_EMAIL,
-                $this->m_student_repository::JUDGE => '=',
-                $this->m_student_repository::VALUE => $request->email,
+                $this->m_member_repository::KEY => MMember::COL_EMAIL,
+                $this->m_member_repository::JUDGE => '=',
+                $this->m_member_repository::VALUE => $request->email,
             ]
         );
         $params = [
